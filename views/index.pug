@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+  .flex-container
+    .flex-child.left
+      h1 My todos
+      p User 
+      input#input-name(type='text')
+      br
+      p Todo 
+      input#input-task(type='text')
+      br
+      input#submit-data(type='button' value='Submit')
+
+      h1 Search user
+      p User 
+      input#search-name(type='text')
+      br
+      input#search(type='button' value='Search')
+      br
+      br
+      p Server response: 
+      p#server-response
+    .flex-child.right
+      h1#user-name User
+      div#task-list
+        div(class="delete-task")
+          p Hehee
+        div(class="delete-task")
+          p Hahee
+      
+
+
+  script(src='/javascripts/client.js')
