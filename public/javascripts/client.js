@@ -74,7 +74,7 @@ function deleteUserButton(name) {
                     console.log(response);
                     document.getElementById('user-name').innerText = "";
                     document.getElementById('task-list').innerHTML = "";
-                    document.getElementById('server-response').innerText = response
+                    document.getElementById('server-response').innerText = response;
                     document.getElementById('delete-user').innerHTML = "";
 
                 } 
