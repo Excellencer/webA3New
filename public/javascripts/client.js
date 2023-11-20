@@ -69,16 +69,21 @@ function deleteUserButton(name) {
             })
             .then(response => response.text())
             .then(response => {
-                if (response === "User deleted") {
-                    console.log(response);
-                    console.log(response);
-                    document.getElementById('user-name').innerText = "";
-                    document.getElementById('task-list').innerHTML = "";
-                    document.getElementById('server-response').innerText = response;
-                    document.getElementById('delete-user').innerHTML = "";
-
-                } 
-                document.getElementById('server-response').innerText = response
+                try {
+                    if (response === "User deleted") {
+                        console.log(response);
+                        console.log(response);
+                        document.getElementById('user-name').innerText = "";
+                        document.getElementById('task-list').innerHTML = "";
+                        document.getElementById('server-response').innerText = response;
+                        document.getElementById('delete-user').innerHTML = "";
+    
+                    } 
+                    document.getElementById('server-response').innerText = response
+                    
+                } catch (error) {
+                    document.getElementById('server-response').innerText = response
+                }
                 
                 
                 });
